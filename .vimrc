@@ -154,3 +154,9 @@ call vundle#begin()
 call vundle#end()
 filetype plugin indent on
 
+" Shebang line automatically generated
+augroup Shebang
+  autocmd BufNewFile *.py 0put =\"#!/usr/bin/env python\<nl># -*- coding: utf-8 -*-\<nl>\"|$
+  autocmd BufNewFile *.rb 0put =\"#!/usr/bin/env ruby\<nl># -*- coding: None -*-\<nl>\"|$
+augroup END
+
